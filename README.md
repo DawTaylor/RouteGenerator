@@ -1,6 +1,6 @@
 # Route generator
 
-Projeto destinado a criar um gerador de rotas segundo um padrão onde as rotas sejam geradas automaticamente à partir dos controllers disponíveis.
+Projeto destinado a criar um gerador de rotas segundo um padrão onde as rotas sejam geradas automaticamente à partir dos `controllers` disponíveis.
 
 Antes de mais nada, precisamos entender como funciona a definição de rotas. Nesse exemplo utilizaremos o `restify-route` em conjunto com o `restify`, que é um framework Node focado em APIs REST.
 
@@ -146,7 +146,7 @@ Agora podemos pensar em automatizar a criação dessas rotas, utilizando o módu
 ```js
 var fs = require('fs')
 ```
-À partir do uso desse módulo, podemos fazer a leitura do conteúdo da pasta `controller` e identificar quais os `controllers` disponíveis. Algo como:
+A partir do uso desse módulo, podemos fazer a leitura do conteúdo da pasta `controller` e identificar quais os `controllers` disponíveis. Algo como:
 
 ```js
 fs.readdir(__dirname + '/controller', (err, files) => {
