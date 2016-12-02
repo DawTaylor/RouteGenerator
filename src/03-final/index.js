@@ -1,14 +1,12 @@
-var restify = require('restify')
-var router = require('restify-route')
-var loader = require('./lib/loader.js')
+const CONTROLLER_PATH = '/controller/'
+const restify = require('restify')
+const router = require('restify-route')
+const loader = require('./lib/loader.js')
 
-var server = restify.createServer()
+const server = restify.createServer()
 
-router
-	.use(server)
+router.use(server)
 
-loader(__dirname + '/controller/', router)
+loader(__dirname + CONTROLLER_PATH, router)
 
-server.listen(process.argv[2], () => {
-  console.log('%s listening at %s', server.name, server.url);
-})
+server.listen(process.argv[2], () => console.log('%s listening at %s', server.name, server.url))
